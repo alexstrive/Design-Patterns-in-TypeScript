@@ -1,0 +1,43 @@
+[
+  {
+    "name": "creational",
+    "patterns": [
+      "abstract factory",
+      "builder",
+      "factory method",
+      "object pool",
+      "prototype",
+      "singleton"
+    ]
+  },
+  {
+    "name": "structural",
+    "patterns": [
+      "adapter",
+      "bridge",
+      "composite",
+      "decorator",
+      "facade",
+      "flyweight",
+      "private class data",
+      "proxy"
+    ]
+  },
+  {
+    "name": "behavioral",
+    "patterns": [
+      "chain of responsibility",
+      "command",
+      "interpreter",
+      "iterator",
+      "mediator",
+      "memento",
+      "null object",
+      "observer",
+      "state",
+      "strategy",
+      "template method",
+      "visitor"
+    ]
+  }
+]
