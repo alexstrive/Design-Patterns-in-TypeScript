@@ -1,3 +1,5 @@
 import Cli from "./lib/cli";
+import PatternLoader from "./lib/pattern-loader/PatternLoader";
 
-Cli.start();
+const cli = new Cli();
+cli.run();

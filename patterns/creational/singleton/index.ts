@@ -6,18 +6,17 @@ class Singleton {
 
     // Method uses lazy loading
     public static getInstance() {
-        
+
         if (!this.instance) {
             this.instance = new this();
         }
 
         return this.instance;
-
     }
 }
 
-export default function run() {
-    // let  singletonInstance = new Singleton(); // cause error because constructor is private
+export function run() {
+    // let singletonInstance = new Singleton(); // cause an error because constructor is private
     let singletonInstance = Singleton.getInstance();
 
     // always happens

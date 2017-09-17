@@ -1,43 +1,106 @@
 [
   {
-    "name": "creational",
-    "patterns": [
-      "abstract factory",
-      "builder",
-      "factory method",
-      "object pool",
-      "prototype",
-      "singleton"
-    ]
+    "name": "Abstract Factory",
+    "type": "creational"
   },
   {
-    "name": "structural",
-    "patterns": [
-      "adapter",
-      "bridge",
-      "composite",
-      "decorator",
-      "facade",
-      "flyweight",
-      "private class data",
-      "proxy"
-    ]
+    "name": "Builder",
+    "type": "creational"
   },
   {
-    "name": "behavioral",
-    "patterns": [
-      "chain of responsibility",
-      "command",
-      "interpreter",
-      "iterator",
-      "mediator",
-      "memento",
-      "null object",
-      "observer",
-      "state",
-      "strategy",
-      "template method",
-      "visitor"
-    ]
+    "name": "Factory Method",
+    "type": "creational"
+  },
+  {
+    "name": "Object Pool",
+    "type": "creational"
+  },
+  {
+    "name": "Prototype",
+    "type": "creational"
+  },
+  {
+    "name": "Singleton",
+    "type": "creational"
+  },
+  {
+    "name": "Adapter",
+    "type": "structural"
+  },
+  {
+    "name": "bridge",
+    "type": "structural"
+  },
+  {
+    "name": "composite",
+    "type": "structural"
+  },
+  {
+    "name": "decorator",
+    "type": "structural"
+  },
+  {
+    "name": "facade",
+    "type": "structural"
+  },
+  {
+    "name": "flyweight",
+    "type": "structural"
+  },
+  {
+    "name": "private class data",
+    "type": "structural"
+  },
+  {
+    "name": "proxy",
+    "type": "structural"
+  },
+  {
+    "name": "chain of responsibility",
+    "type": "behavioral"
+  },
+  {
+    "name": "command",
+    "type": "behavioral"
+  },
+  {
+    "name": "interpreter",
+    "type": "behavioral"
+  },
+  {
+    "name": "iterator",
+    "type": "behavioral"
+  },
+  {
+    "name": "mediator",
+    "type": "behavioral"
+  },
+  {
+    "name": "memento",
+    "type": "behavioral"
+  },
+  {
+    "name": "null object",
+    "type": "behavioral"
+  },
+  {
+    "name": "observer",
+    "type": "behavioral"
+  },
+  {
+    "name": "state",
+    "type": "behavioral"
+  },
+  {
+    "name": "strategy",
+    "type": "behavioral"
+  },
+  {
+    "name": "template method",
+    "type": "behavioral"
+  },
+  {
+    "name": "visitor",
+    "type": "behavioral"
   }
 ]
