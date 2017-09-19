@@ -15,7 +15,7 @@ class Singleton {
     }
 }
 
-export function run() {
+export function bootstrap() {
     // let singletonInstance = new Singleton(); // cause an error because constructor is private
     let singletonInstance = Singleton.getInstance();
 

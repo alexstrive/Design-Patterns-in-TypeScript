@@ -21,8 +21,9 @@ export default class Cli {
             input: process.stdin,
             output: process.stdout
         });
-
         this.io.setPrompt(this.promptSymbol);
+
+        Messager.attachPatternLoader(this.patternLoader);
     }
 
     /** Inits CLI,
@@ -30,7 +31,7 @@ export default class Cli {
      * handle input
      */
     public run(): void {
-        //Messager.showIntro();
+        Messager.showIntro();
         this.io.prompt();
         this.handleInput();
     }
