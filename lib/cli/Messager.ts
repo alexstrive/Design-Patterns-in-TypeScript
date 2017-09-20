@@ -2,32 +2,69 @@ import * as fs from "fs";
 import Formator from "./Formator";
 import PatternLoader from "../pattern-loader/PatternLoader";
 
-const welcomeMessage = fs.readFileSync(
-    "./resources/welcome-message.txt",
-    "utf-8");
-
 export default class Messager {
     private static patternLoader: PatternLoader;
 
-    static attachPatternLoader(patternLoader) {
+    /**
+     * Attach pattern loader
+     * This action modify behaviral of #showInfo method
+     *
+     * @param {PatternLoader} patternLoader
+     * @returns {void}
+     */
+    static attachPatternLoader(patternLoader: PatternLoader) {
         this.patternLoader = patternLoader;
     }
 
+    /**
+     * Shows welcome message and information about patterns
+     *
+     * @returns {void{
+     */
     static showIntro() {
-        console.log(Formator.header(welcomeMessage));
-        this.showInfo();
+        fs.readFile("./resources/welcome-message.txt", "utf8",(err, data) => {
+            console.log(Formator.header(data));
+            this.showInfo();
+        });
     }
 
+    /**
+     * Check avaliblity of pattern list
+     * If app have loaded any then show it
+     * If no patterns have sloaded alert about that
+     *
+     * @returns {void}
+     */
     static showInfo() {
-        if (this.patternLoader) {
+
+        if (!this.patternLoader) {
+            console.error("Pattern loader didn't attach!");
+            return;
+        }
+
+        if (this.patternLoader.avaliblePatterns) {
             this.showAvailablePatterns();
         }
         else {
-            console.log(Formator.subheader("No available patterns!"))
+            console.log(Formator.subheader("No avalible patterns!"))
         }
     }
 
+    /**
+     * Show all avalible patterns in list
+     *
+     * @returns {void}
+     */
     private static showAvailablePatterns() {
         console.log(Formator.subheader("List of available patterns:"));
+
+        //  TODO: categorize them into category
+        this.patternLoader.avaliblePatterns.forEach((currentPattern, patternIndex) => {
+
+            if (currentPattern.runner) {
+                console.log(`${patternIndex} ${Formator.patternText(Formator.capitalize(currentPattern.name))}`);
+            }
+
+        });
     }
 }

@@ -17,4 +17,13 @@ export default class Formator {
     static patternText(text: string): string {
         return `- ${text}`;
     }
+
+    static capitalize(phrase: string): string {
+        let words = phrase.split(" ");
+
+        return words.reduce((phrase, word: string) => {
+            let [firstLetter, ...restWord] = word;
+            return `${phrase}${firstLetter.toUpperCase()}${restWord.join("")} `;
+        }, "");
+    }
 }

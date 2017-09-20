@@ -1,25 +1,24 @@
 import Pattern from "./Pattern";
 
 export default class PatternLoader {
-    private patterns: Pattern[];
+    private _avaliblePatterns: Pattern[];
 
     constructor() {
         this.loadPatterns();
         this.preparePatterns();
-        console.error(this.patterns);
     }
 
     /**
-     * Loads all avalible patterns
+     * Loads all avalible avaliblePatterns
      *
      * @returns {void}
      */
     private loadPatterns() {
-        this.patterns = require("../../../resources/patterns-list.json");
+        this._avaliblePatterns = require("../../../resources/patterns-list.json");
     }
 
     /**
-     * Links patterns with their modules
+     * Links avaliblePatterns with their modules
      *
      * @returns {void}
      */
@@ -28,13 +27,13 @@ export default class PatternLoader {
     }
 
     /**
-     * Link patterns with them modules
+     * Link avaliblePatterns with them modules
      *
      * @returns {void}
      */
     private linkPatternModules(): void {
-        for (let patternIndex in this.patterns) {
-            let currentPattern: Pattern = this.patterns[patternIndex];
+        for (let patternIndex in this._avaliblePatterns) {
+            let currentPattern: Pattern = this._avaliblePatterns[patternIndex];
             currentPattern.runner = this.findModule(currentPattern);
         }
     }
@@ -45,8 +44,8 @@ export default class PatternLoader {
      * @param {number} targetPatternNumber - number of pattern in list
      * @returns {Pattern}
      */
-    public findPatternBootstrap(targetPatternNumber: number) {
-        return this.patterns.find((currentPattern: Pattern, currentPatternIndex: number) => {
+    public findPatternRunner(targetPatternNumber: number) {
+        return this._avaliblePatterns.find((currentPattern: Pattern, currentPatternIndex: number) => {
             return currentPatternIndex == targetPatternNumber;
         }).runner;
     }
@@ -65,5 +64,10 @@ export default class PatternLoader {
         catch (e) {
             console.warn(`Module for pattern ${targetPattern.name.toUpperCase()} not found!`)
         }
+    }
+
+
+    get avaliblePatterns(): Pattern[] {
+        return this._avaliblePatterns;
     }
 }

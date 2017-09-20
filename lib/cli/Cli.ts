@@ -58,7 +58,7 @@ export default class Cli {
 
     private checkPattern(line: string) {
         try {
-            this.patternLoader.findPatternBootstrap(+line)();
+            this.patternLoader.findPatternRunner(+line)();
         }
         catch (exception) {
             console.warn(`Pattern under number ${line} not found.`)
