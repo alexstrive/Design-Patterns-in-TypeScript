@@ -1,7 +1,7 @@
 import Pattern from "./Pattern";
 
 export default class PatternLoader {
-    private _avaliblePatterns: Pattern[];
+    private patterns: Pattern[];
 
     constructor() {
         this.loadPatterns();
@@ -9,16 +9,16 @@ export default class PatternLoader {
     }
 
     /**
-     * Loads all avalible avaliblePatterns
+     * Loads all avalible patterns
      *
      * @returns {void}
      */
     private loadPatterns() {
-        this._avaliblePatterns = require("../../../resources/patterns-list.json");
+        this.patterns = require("../../../resources/patterns-list.json");
     }
 
     /**
-     * Links avaliblePatterns with their modules
+     * Links patterns with their modules
      *
      * @returns {void}
      */
@@ -27,13 +27,13 @@ export default class PatternLoader {
     }
 
     /**
-     * Link avaliblePatterns with them modules
+     * Link patterns with them modules
      *
      * @returns {void}
      */
     private linkPatternModules(): void {
-        for (let patternIndex in this._avaliblePatterns) {
-            let currentPattern: Pattern = this._avaliblePatterns[patternIndex];
+        for (let patternIndex in this.patterns) {
+            let currentPattern: Pattern = this.patterns[patternIndex];
             currentPattern.runner = this.findModule(currentPattern);
         }
     }
@@ -45,7 +45,7 @@ export default class PatternLoader {
      * @returns {Pattern}
      */
     public findPatternRunner(targetPatternNumber: number) {
-        return this._avaliblePatterns.find((currentPattern: Pattern, currentPatternIndex: number) => {
+        return this.patterns.find((currentPattern: Pattern, currentPatternIndex: number) => {
             return currentPatternIndex == targetPatternNumber;
         }).runner;
     }
@@ -59,15 +59,19 @@ export default class PatternLoader {
      */
     private findModule(targetPattern: Pattern) {
         try {
-            return require(`../../patterns/${targetPattern.type.toLowerCase()}/${targetPattern.name.toLowerCase()}`).bootstrap;
+            return require(`../../patterns/${targetPattern.type.toLowerCase()}/${targetPattern.name.toLowerCase()}`).run;
         }
         catch (e) {
             console.warn(`Module for pattern ${targetPattern.name.toUpperCase()} not found!`)
         }
     }
 
-
+    /**
+     * Return all avalible patterns
+     *
+     * @returns {Pattern[]}
+     */
     get avaliblePatterns(): Pattern[] {
-        return this._avaliblePatterns;
+        return this.patterns;
     }
 }

@@ -37,7 +37,7 @@ class Subject {
     }
 }
 
-export function bootstrap() {
+export function run() {
     console.log('Pattern Observer started executing...')
     let subjectFirst = new Subject();
     let subjectSecond = new Subject();
