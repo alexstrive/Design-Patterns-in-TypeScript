@@ -24,7 +24,7 @@
     "type": "creational"
   },
   {
-    "name": "Adapter",
+    "name": "adapter",
     "type": "structural"
   },
   {
