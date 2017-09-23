@@ -62,7 +62,7 @@ export default class PatternLoader {
             return require(`../../patterns/${targetPattern.type.toLowerCase()}/${targetPattern.name.toLowerCase()}`).run;
         }
         catch (e) {
-            console.warn(`Module for pattern ${targetPattern.name.toUpperCase()} not found!`)
+            console.warn(`Module for pattern ${targetPattern.name.toUpperCase()} not found!`);
         }
     }
 
