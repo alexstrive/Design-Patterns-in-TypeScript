@@ -15,9 +15,12 @@ To start project, you need type in console next command:
 At the moment the next patterns implemented:
 
 * [Creational](https://en.wikipedia.org/wiki/Creational_pattern)
+    * [Abstract Factory](https://en.wikipedia.org/wiki/Abstract_factory_pattern)
     * [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern)
 * [Behavioral](https://en.wikipedia.org/wiki/Behavioral_pattern)
+    * [Chain of Responsibility](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
     * [Observer](https://en.wikipedia.org/wiki/Observer_pattern)
+    * [Visitor](https://en.wikipedia.org/wiki/Visitor_pattern)
 * [Structural](https://en.wikipedia.org/wiki/Structural_pattern)
     * [Adapter](https://en.wikipedia.org/wiki/Adapter_pattern)
     * [Bridge](https://en.wikipedia.org/wiki/Bridge_pattern)
