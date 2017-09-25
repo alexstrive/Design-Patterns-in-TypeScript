@@ -16,6 +16,9 @@ At the moment the next patterns implemented:
 
 * [Creational](https://en.wikipedia.org/wiki/Creational_pattern)
     * [Abstract Factory](https://en.wikipedia.org/wiki/Abstract_factory_pattern)
+    * [Builder](https://en.wikipedia.org/wiki/Builder_pattern)
+    * [Factory Method](https://en.wikipedia.org/wiki/Factory_method_pattern)
+    * [Prototype](https://en.wikipedia.org/wiki/Prototype_pattern)
     * [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern)
 * [Behavioral](https://en.wikipedia.org/wiki/Behavioral_pattern)
     * [Chain of Responsibility](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
