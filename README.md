@@ -1,7 +1,7 @@
 # Design-Patterns-in-TypeScript
 Implementation of Design Patterns in modern TypeScript
 
-## Compilation
+## Usage
 To start project, you need type in console next command: 
 
 `npm start` - Updates, compiles and runs project
