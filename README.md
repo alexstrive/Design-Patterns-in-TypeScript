@@ -1,4 +1,4 @@
-# Design-Patterns-in-TypeScript
+# Design Patterns in TypeScript
 Implementation of Design Patterns in modern TypeScript
 
 ## Usage
