@@ -10,6 +10,8 @@ To start project, you need type in console next command:
 
 `npm run compile` - Compiles project
 
+`npm run compile-watch` - Compile, watch and repeat process. _Only for development purposes!_
+
 ## List of Design Patterns
 
 At the moment the next patterns implemented:
@@ -22,6 +24,7 @@ At the moment the next patterns implemented:
     * [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern)
 * [Behavioral](https://en.wikipedia.org/wiki/Behavioral_pattern)
     * [Chain of Responsibility](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
+    * [Command](https://en.wikipedia.org/wiki/Command_pattern)
     * [Observer](https://en.wikipedia.org/wiki/Observer_pattern)
     * [Visitor](https://en.wikipedia.org/wiki/Visitor_pattern)
 * [Structural](https://en.wikipedia.org/wiki/Structural_pattern)

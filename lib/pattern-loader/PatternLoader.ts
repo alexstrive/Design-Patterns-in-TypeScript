@@ -23,7 +23,7 @@ export default class PatternLoader {
      * @returns {void}
      */
     private preparePatterns() {
-        this.linkPatternModules();
+        this.linkPatternRunners();
     }
 
     /**
@@ -31,38 +31,40 @@ export default class PatternLoader {
      *
      * @returns {void}
      */
-    private linkPatternModules(): void {
-        for (let patternIndex in this.patterns) {
-            let currentPattern: Pattern = this.patterns[patternIndex];
-            currentPattern.runner = this.findModule(currentPattern);
+    private linkPatternRunners(): void {
+        for (let currentPattern of this.patterns) {
+            let patternModule = this.findModule(currentPattern);
+
+            if (patternModule) {
+                currentPattern.runner = patternModule.run;
+            }
         }
     }
 
     /**
-     * Try to find bootstrap function for pattern
+     * Try to find runner function for pattern
      *
-     * @param {number} targetPatternNumber - number of pattern in list
+     * @param {number} targetPatternNumber - number of pattern
      * @returns {Pattern}
      */
     public findPatternRunner(targetPatternNumber: number) {
-        return this.patterns.find((currentPattern: Pattern, currentPatternIndex: number) => {
-            return currentPatternIndex == targetPatternNumber;
-        }).runner;
+        return this.patterns[targetPatternNumber].runner;
     }
 
     /**
-     * Try to find a runner by pattern type name and pattern name
-     * if runner didn't find it will pass error
+     * Try to find a runner function for pattern by type and name
+     * if runner function didn't find it will pass error
      * only show warning
      *
      * @param {Pattern} targetPattern
      */
     private findModule(targetPattern: Pattern) {
         try {
-            return require(`../../patterns/${targetPattern.type.toLowerCase()}/${targetPattern.name.toLowerCase()}`).run;
+            return require(`../../patterns/${targetPattern.type.toLowerCase()}/${targetPattern.name.toLowerCase()}`);
         }
-        catch (e) {
-            console.warn(`Module for pattern ${targetPattern.name.toUpperCase()} not found!`);
+        catch (error) {
+            console.warn(`Error happend while loading module ${targetPattern.name.toUpperCase()}!`);
+            console.log(error);
         }
     }
 

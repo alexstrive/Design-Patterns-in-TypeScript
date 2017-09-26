@@ -19,7 +19,7 @@ export default class Messager {
     /**
      * Shows welcome message and information about patterns
      *
-     * @returns {void{
+     * @returns {void}
      */
     static showIntro() {
         fs.readFile("./resources/welcome-message.txt", "utf8",(err, data) => {
