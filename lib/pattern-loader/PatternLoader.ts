@@ -64,7 +64,7 @@ export default class PatternLoader {
         }
         catch (error) {
             console.warn(`Error happend while loading module ${targetPattern.name.toUpperCase()}!`);
-            console.log(error);
+            console.error(error);
         }
     }
 
