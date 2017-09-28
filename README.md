@@ -4,13 +4,15 @@ Implementation of Design Patterns in modern TypeScript
 ## Usage
 To start project, you need type in console next command: 
 
-`npm start` - Updates, compiles and runs project
+`npm start` - Update, compile and run project
 
-`npm run update` - Updates npm packages
+Also you can use:
 
-`npm run compile` - Compiles project
+`npm run update` - Update npm packages
 
-`npm run compile-watch` - Compile, watch and repeat process. _Only for development purposes!_
+`npm run compile` - Compile project
+
+`npm run compile-watch` - Compile and watch for changes
 
 ## List of Design Patterns
 
