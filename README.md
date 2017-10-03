@@ -28,6 +28,7 @@ At the moment the next patterns implemented:
     * [Chain of Responsibility](https://github.com/allordiron/Design-Patterns-in-TypeScript/blob/master/patterns/behavioral/chain%20of%20responsibility/index.ts)
     * [Command](https://github.com/allordiron/Design-Patterns-in-TypeScript/blob/master/patterns/behavioral/command/index.ts)
     * [Interpreter](https://github.com/allordiron/Design-Patterns-in-TypeScript/blob/master/patterns/behavioral/interpreter/index.ts)
+    * [Mediator](https://github.com/allordiron/Design-Patterns-in-TypeScript/blob/master/patterns/behavioral/mediator/index.ts)
     * [Observer](https://github.com/allordiron/Design-Patterns-in-TypeScript/blob/master/patterns/behavioral/observer/index.ts)
     * [State](https://github.com/allordiron/Design-Patterns-in-TypeScript/blob/master/patterns/behavioral/state/index.ts)
     * [Visitor](https://github.com/allordiron/Design-Patterns-in-TypeScript/blob/master/patterns/behavioral/visitor/index.ts)
