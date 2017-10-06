@@ -1,6 +1,6 @@
 import * as chalk from "chalk";
 
-export default class Formator {
+export default class Formatter {
 
     static header(text: string): string {
         return chalk.bold.underline(text);

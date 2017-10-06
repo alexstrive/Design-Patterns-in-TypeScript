@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import Formatter from "./Formator";
+import Formatter from "./Formatter";
 import PatternLoader from "../pattern-loader/PatternLoader";
 
 export default class Messager {
