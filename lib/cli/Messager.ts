@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import Formator from "./Formator";
+import Formatter from "./Formator";
 import PatternLoader from "../pattern-loader/PatternLoader";
 
 export default class Messager {
@@ -23,7 +23,7 @@ export default class Messager {
      */
     static showIntro() {
         fs.readFile("./resources/welcome-message.txt", "utf8",(err, data) => {
-            console.log(Formator.header(data));
+            console.log(Formatter.header(data));
             this.showInfo();
         });
     }
@@ -46,7 +46,7 @@ export default class Messager {
             this.showAvailablePatterns();
         }
         else {
-            console.log(Formator.subheader("No avalible patterns!"))
+            console.log(Formatter.subheader("No avalible patterns!"))
         }
     }
 
@@ -56,13 +56,13 @@ export default class Messager {
      * @returns {void}
      */
     private static showAvailablePatterns() {
-        console.log(Formator.subheader("List of available patterns:"));
+        console.log(Formatter.subheader("List of available patterns:"));
 
         //  TODO: categorize them into category
         this.patternLoader.avaliblePatterns.forEach((currentPattern, patternIndex) => {
 
             if (currentPattern.runner) {
-                console.log(`${patternIndex} ${Formator.patternText(Formator.capitalize(currentPattern.name))}`);
+                console.log(`${patternIndex} ${Formatter.patternText(Formatter.capitalize(currentPattern.name))}`);
             }
 
         });
