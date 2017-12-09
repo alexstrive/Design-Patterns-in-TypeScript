@@ -33,7 +33,7 @@ class ConcreteDecoratorB extends Decorator {
     operation(): void {
         this.addedBehavior();
         super.operation();
-        console.log("ConcreteDecoratorA.operation()")
+        console.log("ConcreteDecoratorB.operation()")
     }
 
     private addedBehavior() {
