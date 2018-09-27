@@ -19,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allordiron/Design-Patterns-in-TypeScript.git"
+    "url": "git+https://github.com/novopashin/Design-Patterns-in-TypeScript.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/allordiron/Design-Patterns-in-TypeScript/issues"
+    "url": "https://github.com/novopashin/Design-Patterns-in-TypeScript/issues"
   },
-  "homepage": "https://github.com/allordiron/Design-Patterns-in-TypeScript#readme"
+  "homepage": "https://github.com/novopashin/Design-Patterns-in-TypeScript#readme"
 }
